@@ -1,0 +1,36 @@
+{
+  "name": "ojisan-language",
+  "displayName": "Ojisan Language",
+  "description": "おじさん構文プログラミング言語のシンタックスハイライト",
+  "version": "1.0.0",
+  "publisher": "ojisan-lang",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ojisan",
+        "aliases": [
+          "Ojisan",
+          "ojisan"
+        ],
+        "extensions": [
+          ".ojs",
+          ".oji"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ojisan",
+        "scopeName": "source.ojisan",
+        "path": "./syntaxes/ojisan.tmLanguage.json"
+      }
+    ]
+  }
+}

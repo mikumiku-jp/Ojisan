@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ojisan",
+  "scopeName": "source.ojisan",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#string" },
+    { "include": "#number" },
+    { "include": "#keyword-control" },
+    { "include": "#keyword-declaration" },
+    { "include": "#keyword-operator" },
+    { "include": "#constant-language" },
+    { "include": "#support-function" },
+    { "include": "#keyword-other" },
+    { "include": "#punctuation" },
+    { "include": "#variable" }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.block.ojisan",
+      "begin": "（ココだけの話…",
+      "end": "）",
+      "beginCaptures": { "0": { "name": "punctuation.definition.comment.begin.ojisan" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.comment.end.ojisan" } }
+    },
+    "string": {
+      "name": "string.quoted.other.ojisan",
+      "begin": "「",
+      "end": "」",
+      "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.ojisan" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.string.end.ojisan" } }
+    },
+    "number": {
+      "name": "constant.numeric.ojisan",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "keyword-control": {
+      "name": "keyword.control.ojisan",
+      "match": "もしかして😍|カナ❓|ナンチャッテ😃|ソウジャナカッタラ😅|オッケー👍|気になるんだけど😚|の間はネ😘|もういいカナ😤|もうムリ😱💦|次イコウヨ😃|コタエは|ダヨ😁|ドキドキするけど😅💦|ヤバかった😱|ドッチニシテモ😤|ドキドキおしまい❗|まで関係あるんだけどサ😁|のメンバーなんだけどサ😁|から"
+    },
+    "keyword-declaration": {
+      "name": "keyword.declaration.ojisan",
+      "match": "チョット聞いてヨ😃|ナンダ😘|ニナッチャッタ😅💦|チャンのやり方教えるネ😘|やり方おしまい❗|サンのコト教えるヨ😃|サンのコトおしまい❗|ハジメマシテ😘|ハジメマシテおしまい❗|サンを作るヨ😃"
+    },
+    "keyword-operator": {
+      "name": "keyword.operator.ojisan",
+      "match": "と(?![ぁ-ん])|ひく|かける|わる|あまり|おなじカナ❓|ちがうカナ❓|より上❗|より下❗|以上❗|以下❗|しかも|もしくは|チガウヨ"
+    },
+    "constant-language": {
+      "name": "constant.language.ojisan",
+      "match": "マジ|ウソ|ナイナイ"
+    },
+    "support-function": {
+      "name": "support.function.ojisan",
+      "match": "型を教えてヨ😃|数字にしてネ😘|文字にしてネ😘|長さを教えてヨ😃|ランダムチャン😃|チョット教えてヨ😃|オッハー❗|ツブヤキ📱|切り捨てチャン😃|切り上げチャン😃|四捨五入チャン😃|絶対値チャン😃|最大チャン😃|最小チャン😃|ルートチャン😃|整数にしてネ😘|表示チャン😃"
+    },
+    "keyword-other": {
+      "name": "keyword.other.ojisan",
+      "match": "ボクの|を追加ダヨ😁|番目チャン|の長さチャン|チャンにオネガイ😃|チャンは|チャンが|チャンに"
+    },
+    "punctuation": {
+      "name": "punctuation.bracket.ojisan",
+      "match": "[【】《》]|→|、"
+    },
+    "variable": {
+      "patterns": [
+        {
+          "name": "variable.other.class.ojisan",
+          "match": "\\w+サン"
+        },
+        {
+          "name": "variable.other.ojisan",
+          "match": "\\w+チャン"
+        }
+      ]
+    }
+  }
+}
